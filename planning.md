@@ -1,3 +1,5 @@
+## *MEALS ON WHEELS*
+### A SOCIAL APP THAT CONNECTS PEOPLE THROUGH FOOD TRUCKS!!
 ## **USER STRORIES**
 ### **NON-Logged In users will be able to:**
 * Loggin to account
