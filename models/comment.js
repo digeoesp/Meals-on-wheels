@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      //is this correct???? I mean a post has many comments 
+      //whats the association between comment and post and user
+      models.comment.belongsTo(models.post)
+      models.comment.hasMany(models.user)
     }
   };
   comment.init({

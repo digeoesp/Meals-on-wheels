@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      //post can only belong to one use
+      models.post.belongsTo(models.user)
+      //post can have multiple comments
+      models.post.hasMany(models.comment)
+
     }
   };
   post.init({
