@@ -64,15 +64,4 @@ module.exports = server;
 
 
 
-// espn.com
-
-// basketball/college
-// basketball/nba
-// basketball/gleague
-// basketball/europe
-
-// football
-// baseball
-// ...
-
 
