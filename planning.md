@@ -1,17 +1,18 @@
 ## *MEALS ON WHEELS*
 ### A SOCIAL APP THAT CONNECTS PEOPLE THROUGH FOOD TRUCKS!!
-#### MEALS ON WHEELS IS A SOCIAL APP THAT ALLOWS MEMBERS TO UPLOAD THEIR FAVORITE FOOD TRUCKS AND A DISCRIPTION OF WHAT THEY ENJOY TO EAT. WHILE SHARING CITY AND NAME OF FOOD TRUCKS FOR OTHER MEMBERS TO CHECK OUT.MEMBERS WILL BE ABLE TO COMMENT ON POSTED FOOD TRUCKS AND SHARE THEIR EXPIRIENCES.
-
-## **USER STRORIES**
+#### MEALS ON WHEELS IS A SOCIAL APP THAT ALLOWS MEMBERS TO UPLOAD THEIR FAVORITE FOOD TRUCKS AND A DESCRIPTION OF WHAT THEY ENJOY TO EAT. WHILE SHARING CITY AND NAME OF FOOD TRUCKS FOR OTHER MEMBERS TO CHECK OUT.MEMBERS WILL BE ABLE TO COMMENT ON POSTED FOOD TRUCKS AND SHARE THEIR EXPERIENCES.
+ 
+## **USER STORIES**
 ### **NON-Logged In users will be able to:**
-* Loggin to account
+* Login to account
 * Sign up to be a member of Meals on Wheels
 * View Meals on Wheels home page
 ### **Logged in users will be able to:**
 * Post Food Trucks that they have seen
-* Write the name of the food truck, city , and discription 
-* See post of other members 
+* Write the name of the food truck, city , and description
+* See post of other members
 * comment on other members post
+
 
 
 image files of wireframes
