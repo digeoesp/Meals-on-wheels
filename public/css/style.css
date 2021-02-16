@@ -7,3 +7,8 @@ nav ul li {
 h1 {
   color: chartreuse;
 }
+
+.page {
+  display: flexbox;
+  text-align: center;
+}
