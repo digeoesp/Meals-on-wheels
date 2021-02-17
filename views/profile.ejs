@@ -3,11 +3,21 @@
 
 
 <form action="/newsFeed"  method="POST" enctype="multipart/form-data">
-    <label for="inputFile">Image</label>
+    <label for="nameOfTruck">Name of truck</label>
+    <input type="text" name="nameOfTruck"><br>
+    <label for="description">description</label>
+    <input type="text" name="description"><br>
+    <label for="city">city</label>
+    <input type="text" name="city"><br>
+    
+    <label for="inputFile">Image</label> 
     <input type="file" name="inputFile">
     <button type="submit" class="btn btn-primary">Upload Image</button>
 
 </form>
+
+
+
 
 <p>Id: <%= id %></p>
 <p>Name: <%= name %></p>

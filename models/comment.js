@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       //is this correct???? I mean a post has many comments 
       //whats the association between comment and post and user
       //can one model belong to many things
-      // models.comment.belongsTo(models.post)
-      // models.comment.belongsTo(models.user)
+      models.comment.belongsTo(models.post)
+      models.comment.belongsTo(models.user)
     }
   };
   comment.init({

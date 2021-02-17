@@ -16,6 +16,7 @@ app.set('view engine', 'ejs');
 // Session 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const isLoggedIn = require('./middleware/isLoggedIn');
+const { response } = require('express');
 
 // MIDDLEWARE
 app.use(require('morgan')('dev'));
@@ -60,8 +61,14 @@ app.get('/profile', isLoggedIn, (req, res) => {
 });
 
 app.get('/newsFeed', isLoggedIn, (req, res) => {
-  res.render('newsFeed');
+  db.post.findAll()
+  .then(postArray =>{
+    console.log(postArray)
+    res.render('newsFeed', {posts: postArray});
+
+  })
 });
+  
 
 
 //first we have to upload the file into the folder then we have access to the file
@@ -72,10 +79,27 @@ app.post('/newsFeed', uploads.single('inputFile'), (req, res) =>{//pass in the u
   //upload to image to cloudinary
   cloudinary.uploader.upload(image, (result) =>{//first parameter is the file// next one is what happens after file uploaded//we are getting back a result
       console.log(result)//result comeback from cloudinary//should get an object back in terminal//I get the url inside the object
-      res.render('newsFeed', {image: result.url})
+      db.post.create({
+       nameOfTruck: req.body.nameOfTruck,
+       city: req.body.city,
+       description: req.body.description,
+       img: result.url
+      })
+      .then(newPost =>{
+        console.log(newPost.get())
+        res.redirect('newsFeed')
+      })
     })
 
+
 })
+
+
+
+
+
+
+
 
 
 const PORT = process.env.PORT || 3000;
