@@ -13,9 +13,15 @@
     <input type="file" name="inputFile" class="profileChooseFile"><br>
     <button type="submit" class="btn btn-primary" id="profileUpload">Upload Image</button>
 </form>
-    
-
-
+<img src="../imagesFolder/foodtrucks.jpg" alt="image">
+ 
+<% for(let i = 0; i < allPosts.length; i++) { %> 
+    <% let postItem = allPosts[i].get() %> 
+     <img src="<%= postItem.img %>" alt="Food Truck">
+     <p><%= postItem.userId %> </p>
+     <p><%= postItem.name %> </p>
+<% } %> 
+     
 
 
 

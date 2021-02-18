@@ -17,6 +17,8 @@ app.set('view engine', 'ejs');
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const isLoggedIn = require('./middleware/isLoggedIn');
 const { response } = require('express');
+const user = require('./models/user');
+const { post } = require('./controllers/auth');
 
 // MIDDLEWARE
 app.use(require('morgan')('dev'));
@@ -57,10 +59,18 @@ app.get('/', (req, res) => {
 
 app.get('/profile', isLoggedIn, (req, res) => {
   const { id, name, email } = req.user.get();
-  res.render('profile', { id, name, email});
-});
+  req.user.getPosts()
+    .then(allPosts =>{
+      console.log(allPosts)
+      res.render('profile', { allPosts: allPosts,id, name, email});
+        console.log(allPosts)
+    })
+})
+
+ 
  
 app.get('/newsFeed', isLoggedIn, (req, res) => {
+ 
   db.post.findAll()
   .then(postArray =>{
     console.log(postArray)
@@ -84,7 +94,8 @@ app.post('/newsFeed', uploads.single('inputFile'), (req, res) =>{//pass in the u
        
       })
       .then(newPost =>{
-        console.log(newPost.get())
+        req.user.addPost(newPost)
+        console.log(req.user)
         res.redirect('newsFeed')
       })
     })
