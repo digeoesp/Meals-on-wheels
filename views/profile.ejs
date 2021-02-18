@@ -1,6 +1,8 @@
-<h1 class="profileHead">Welcome to your PROFILE</h1>
-<h2><%= name%>'s page</h2>
+<h1 class="profileHead">Welcome to your profile</h1>
+<h2 class="profileUsername"><%= name%></h2>
+<% console.log('this is currentUser', currentUser) %> 
 <form action="/newsFeed"  method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="userId" value= <%=currentUser.dataValues.id %>>
     <label for="nameOfTruck">Name of truck</label>
     <input type="text" name="nameOfTruck"><br>
     <label for="city">city</label>
@@ -17,9 +19,11 @@
 
 
 
+
 <p>Id: <%= id %></p>
 <p>Name: <%= name %></p>
 <p>Email: <%= email %></p>
+
 
 
 

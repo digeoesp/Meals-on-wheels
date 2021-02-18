@@ -31,5 +31,18 @@ nav ul li {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.profileHead{
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+  color: rgb(255, 183, 0);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.profileUsername{
+  font-size: 70px;
+  font-family: 'Lobster', cursive;
+  color: rgb(210, 252, 0);
+  text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 
 /* font-family: 'Nerko One', cursive; */

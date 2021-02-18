@@ -65,10 +65,13 @@ app.get('/profile', isLoggedIn, (req, res) => {
   
 
 app.get('/newsFeed', isLoggedIn, (req, res) => {
+  let user = JSON.stringify (req.user)
   db.post.findAll()
+  
   .then(postArray =>{
-    console.log(postArray)
-    res.render('newsFeed', {posts: postArray});
+    console.log('**************', user)
+
+    res.render('newsFeed', {posts: postArray, user:user.name});
 
   })
 });
@@ -87,7 +90,8 @@ app.post('/newsFeed', uploads.single('inputFile'), (req, res) =>{//pass in the u
        nameOfTruck: req.body.nameOfTruck,
        city: req.body.city,
        description: req.body.description,
-       img: result.url
+       img: result.url,
+       userId: req.body.userId
       })
       .then(newPost =>{
         console.log(newPost.get())

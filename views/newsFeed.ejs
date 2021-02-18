@@ -1,18 +1,21 @@
-
-<!-- this image comes from the server.js -->
-<h1>edbewicbiuewbcerwioubc</h1>
-<h1>feed page</h1>
 <h1>NEWS FEED</h1>
-<p>EVERYONES POST SHOULD DISPLAY IN HERE</p>
 
+<% console.log(user)  %> 
 <% for(let i = 0; i < posts.length; i++) { %> 
     <% let postItem = posts[i].get() %> 
-     <img src="<%= postItem.img %>" alt="Food Truck"> 
-     <p><%= postItem.nameOfTruck %> </p>
-     <p><%= postItem.city %></p>
-     <p><%= postItem.description %> </p>
+     <img src="<%= postItem.img %>" alt="Food Truck">
+     <h1>test</h1>
+    
+        <p><%= user %> </p>
+        <h1>test 2</h1>
+        
+        <p><%= postItem.nameOfTruck %> </p>
+        <p><%= postItem.city %></p>
+        <p><%= postItem.description %> </p>
+   <% } %> 
+        
+        
      
-<% } %> 
 
 
 
