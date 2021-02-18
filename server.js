@@ -60,24 +60,14 @@ app.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile', { id, name, email});
 });
  
-
-
-  
-
 app.get('/newsFeed', isLoggedIn, (req, res) => {
-  let user = JSON.stringify (req.user)
   db.post.findAll()
-  
   .then(postArray =>{
-    console.log('**************', user)
-
-    res.render('newsFeed', {posts: postArray, user:user.name});
-
+    console.log(postArray)
+    res.render('newsFeed', {posts: postArray});
   })
 });
-  
-
-
+ 
 //first we have to upload the file into the folder then we have access to the file
 app.post('/newsFeed', uploads.single('inputFile'), (req, res) =>{//pass in the uploads folder//allows us to bring in a single file
   //greab uploaded file
@@ -91,7 +81,7 @@ app.post('/newsFeed', uploads.single('inputFile'), (req, res) =>{//pass in the u
        city: req.body.city,
        description: req.body.description,
        img: result.url,
-       userId: req.body.userId
+       
       })
       .then(newPost =>{
         console.log(newPost.get())

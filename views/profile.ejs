@@ -1,26 +1,26 @@
 <h1 class="profileHead">Welcome to your profile</h1>
 <h2 class="profileUsername"><%= name%></h2>
-<% console.log('this is currentUser', currentUser) %> 
+
 <form action="/newsFeed"  method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="userId" value= <%=currentUser.dataValues.id %>>
-    <label for="nameOfTruck">Name of truck</label>
-    <input type="text" name="nameOfTruck"><br>
-    <label for="city">city</label>
-    <input type="text" name="city"><br>
-    <label for="description">description</label>
-    <input type="text" name="description"><br>
-    
-    <label for="inputFile">Image</label> 
-    <input type="file" name="inputFile">
-    <button type="submit" class="btn btn-primary">Upload Image</button>
+  
+    <label for="nameOfTruck" class="profileNameOfTruck">Name of truck</label>
+    <input type="text" name="nameOfTruck" class="profileNameOfTruckInput"><br>
+    <label for="city" class="profileCity">city</label>
+    <input type="text" name="city" class="profileCityInput"><br>
+    <label for="description" class="profileDescription">description</label>
+    <input type="text" name="description" class="profileDescriptionInput"><br>
+    <label for="inputFile" class="profileImage">Image</label>
+    <input type="file" name="inputFile" class="profileChooseFile"><br>
+    <button type="submit" class="btn btn-primary" id="profileUpload">Upload Image</button>
 </form>
+    
 
 
 
 
 
 
-<p>Id: <%= id %></p>
+
 <p>Name: <%= name %></p>
 <p>Email: <%= email %></p>
 

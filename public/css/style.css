@@ -8,7 +8,7 @@ nav ul li {
   text-align: center;
 }
 
-.homepageHeader{
+.homepageHeader {
   color: rgba(128, 255, 0, 0.926);
   font-size: 80px;
   font-family: 'Black And White Picture', sans-serif;
@@ -16,7 +16,7 @@ nav ul li {
   opacity: 100%;
 }
 
-.homepageSecondHeader{
+.homepageSecondHeader {
   font-size: 40px;
   font-family: 'Black And White Picture', sans-serif;
   color: rgb(255, 60, 0);
@@ -24,24 +24,95 @@ nav ul li {
   opacity: 100%;
 }
 
-.homepageIntro{
+.homepageIntro {
   font-size: 40px;
   font-family: 'Black And White Picture', sans-serif;
   color: rgb(255, 183, 0);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.profileHead{
+.profileHead {
   font-size: 40px;
   font-family: 'Lobster', cursive;
   color: rgb(255, 183, 0);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-.profileUsername{
+.profileUsername {
   font-size: 70px;
   font-family: 'Lobster', cursive;
   color: rgb(210, 252, 0);
   text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.profileNameOfTruck {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  left: -40px;
+  font-size: 25px;
+  color: yellow;
+  text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+}
+.profileNameOfTruckInput {
+  position: relative;
+  left: -40px;
+  padding: 4px;
+}
+
+.profileCity {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  left: 10px;
+  font-size: 25px;
+  color: greenyellow;
+  text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+}
+.profileCityInput {
+  position: relative;
+  left: 10px;
+  padding: 4px;
+}
+.profileDescription {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  left: -24px;
+  font-size: 25px;
+  color: red;
+  text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+  padding: 0px 0px 0px 0px;
+}
+
+.profileDescriptionInput {
+  position: relative;
+  left: -24px;
+  padding: 4px;
+
+}
+
+.profileImage {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  left: 75px;
+  font-size: 25px;
+  color: rgb(249, 192, 8);
+  text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+}
+.profileChooseFile {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  left: 75px;
+  font-size: 18px;
+  color: rgb(255, 247, 0);
+  text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+  padding: 0px 0px 20px 0px;
+}
+#profileUpload {
+  font-family: 'Lobster', cursive;
+  text-shadow: -1px 0 rgb(4, 1, 1), 0 1px black, 1px 0 black, 0 -1px black;
+  color: rgb(168, 235, 33);
+  font-size: 25px;
+  position: relative;
+  left: 25px;
+  background-color: rgb(252, 24, 24);
 }
 
 
