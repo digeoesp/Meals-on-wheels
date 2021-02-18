@@ -1,20 +1,18 @@
-<h3>Welcome to your PROFILE</h3>
-<h2><%= name%>'s Page</h2>
-
-
+<h1 class="profileHead">Welcome to your PROFILE</h1>
+<h2><%= name%>'s page</h2>
 <form action="/newsFeed"  method="POST" enctype="multipart/form-data">
     <label for="nameOfTruck">Name of truck</label>
     <input type="text" name="nameOfTruck"><br>
-    <label for="description">description</label>
-    <input type="text" name="description"><br>
     <label for="city">city</label>
     <input type="text" name="city"><br>
+    <label for="description">description</label>
+    <input type="text" name="description"><br>
     
     <label for="inputFile">Image</label> 
     <input type="file" name="inputFile">
     <button type="submit" class="btn btn-primary">Upload Image</button>
-
 </form>
+
 
 
 
@@ -24,8 +22,4 @@
 <p>Email: <%= email %></p>
 
 
-<ul>
-    <li>should diplays users images</li>
-    <li>user should be able to upload images</li>
 
-</ul>

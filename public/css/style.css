@@ -3,12 +3,33 @@ nav ul li {
   display: inline-block;
   margin-right: .3em;
 }
-
-h1 {
-  color: chartreuse;
-}
-
 .page {
   display: flexbox;
   text-align: center;
 }
+
+.homepageHeader{
+  color: rgba(128, 255, 0, 0.926);
+  font-size: 80px;
+  font-family: 'Black And White Picture', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  opacity: 100%;
+}
+
+.homepageSecondHeader{
+  font-size: 40px;
+  font-family: 'Black And White Picture', sans-serif;
+  color: rgb(255, 60, 0);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  opacity: 100%;
+}
+
+.homepageIntro{
+  font-size: 40px;
+  font-family: 'Black And White Picture', sans-serif;
+  color: rgb(255, 183, 0);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+/* font-family: 'Nerko One', cursive; */
