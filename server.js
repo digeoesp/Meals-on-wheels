@@ -70,13 +70,16 @@ app.get('/profile', isLoggedIn, (req, res) => {
  
  
 app.get('/newsFeed', isLoggedIn, (req, res) => {
- 
-  db.post.findAll()
+  db.post.findAll({
+    include: [db.user]
+  })
   .then(postArray =>{
-    console.log(postArray)
+    console.log(postArray[0])
     res.render('newsFeed', {posts: postArray});
   })
 });
+    
+
  
 //first we have to upload the file into the folder then we have access to the file
 app.post('/newsFeed', uploads.single('inputFile'), (req, res) =>{//pass in the uploads folder//allows us to bring in a single file

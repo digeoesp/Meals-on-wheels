@@ -115,5 +115,23 @@ nav ul li {
   background-color: rgb(252, 24, 24);
 }
 
+#loginIntro {
+  font-size: 80px;
+  color: rgb(137, 254, 119);
+}
+
+#loginWelcome {
+  font-size: 80px;
+  color: rgb(255, 66, 66);
+}
+
+#signupIntro {
+  font-size: 80px;
+}
+
+#signupWelcome {
+  font-size: 80px;
+  color: greenyellow;
+}
 
 /* font-family: 'Nerko One', cursive; */
