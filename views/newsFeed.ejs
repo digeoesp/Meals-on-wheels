@@ -1,13 +1,13 @@
-<h1>NEWS FEED</h1>
+<h1 class="newsFeed">WHATS NEW</h1>
 
 
 <% for(let i = 0; i < posts.length; i++) { %> 
     <% let postItem = posts[i].get() %> 
-     <img src="<%= postItem.img %>" alt="Food Truck">
+     <img id="images" src="<%= postItem.img %>" alt="Food Truck">
      <p><%= postItem.nameOfTruck %> </p>
      <p><%= postItem.city %></p>
      <p><%= postItem.description %> </p>
-     <p><%= postItem.user.name  %> </p>
+     <p>Rolling Foodie: <%= postItem.user.name  %></p>
     
 <% } %> 
      
