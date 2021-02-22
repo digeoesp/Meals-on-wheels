@@ -145,4 +145,5 @@ nav ul li {
   max-width: 45%;
 }
 
-/* font-family: 'Nerko One', cursive; */
+@media only screen and (max-width: 600px) {
+}

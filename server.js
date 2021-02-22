@@ -7,6 +7,10 @@ const flash = require('connect-flash');
 const multer = require('multer')
 const cloudinary = require('cloudinary')
 const db = require('./models')
+const methodOverride = require('method-override')
+
+
+
 //uploader for images, make a uploads folder
 const uploads = multer({dest: './uploads'})
 
@@ -25,6 +29,8 @@ app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));//access req.body
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
+app.use(methodOverride('_method'))
+
 
 // Session Middleware
 
@@ -52,6 +58,7 @@ app.use((req, res, next) => {
 
 // Controllers
 app.use('/auth', require('./controllers/auth'));
+
 
 app.get('/', (req, res) => {
   res.render('index');
@@ -106,9 +113,18 @@ app.post('/newsFeed', uploads.single('inputFile'), (req, res) =>{//pass in the u
 
 })
 
-
-
-
+app.delete('/profile/:index', async(req, res) => {
+  try {
+    await db.post.destroy({
+      where: {
+        id: req.params.index
+      }
+    })
+    res.redirect('/profile');
+  } catch(e) {
+    console.log(e.message)
+  }
+})
 
 
 

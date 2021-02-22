@@ -4,10 +4,10 @@
 <% for(let i = 0; i < posts.length; i++) { %> 
     <% let postItem = posts[i].get() %> 
      <img id="images" src="<%= postItem.img %>" alt="Food Truck">
-     <p><%= postItem.nameOfTruck %> </p>
-     <p><%= postItem.city %></p>
+     <p>Name of Truck: <%= postItem.nameOfTruck %> </p>
      <p><%= postItem.description %> </p>
      <p>Rolling Foodie: <%= postItem.user.name  %></p>
+     <p>City: <%= postItem.city %></p>
     
 <% } %> 
      

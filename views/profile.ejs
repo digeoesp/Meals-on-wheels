@@ -14,22 +14,20 @@
     <button type="submit" class="btn btn-primary" id="profileUpload">Upload Image</button>
 </form>
 
- 
+
+
+
 <% for(let i = 0; i < allPosts.length; i++) { %> 
     <% let postItem = allPosts[i].get() %> 
-     <img id="images" src="<%= postItem.img %>" alt="Food Truck">
-     <p><%= postItem.userId %> </p>
-     <p><%= postItem.name %> </p>
-    
+    <img id="images" src="<%= postItem.img %>" alt="Food Truck">
+    <form action="/profile/<%=postItem.id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete Image</button>
+    </form>
 <% } %> 
+
+
+
      
-
-
-
-
-
-<p>Name: <%= name %></p>
-<p>Email: <%= email %></p>
 
 
 
